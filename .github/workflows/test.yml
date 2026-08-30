@@ -35,7 +35,7 @@ jobs:
 
       - name: Compile Standalone Binary
         run: |
-          pyinstaller --noconsole --onefile --name ${{ matrix.target_name }} base.py
+          pyinstaller --noconsole --onefile --collect-all wsgidav --name ${{ matrix.target_name }} base.py
 
       - name: Upload Build Artifacts
         uses: actions/upload-artifact@v4
